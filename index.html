@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulário de cadastro:</h1>
+    <form>
+        <fieldset>
+            <input type="text" name="nome" minlength="4" placeholder="Preencha seu nome completo:" required size="30">
+        </fieldset>
+        <fieldset>
+            <label for="Data">Escolha a sua data de nascimento:</label>
+            <input type="date" id="Data" name="dataNascimento" min="2022-08-01" max="2022-08-31" required>
+        </fieldset>
+        <fieldset>
+            <input type="password" name="senhaUsuário" minlength="4" maxlength="6" placeholder="Digite sua senha:" required>
+        </fieldset>
+        <fieldset>
+        <label for="estado_civil">Selecione o seu estado civil:</label>
+            <select name="estado_civil" id="estado_civil">
+                <option value="1">---</option>
+                <option selected value="2">Solteiro</option>
+                <option value="3">Casado</option>
+                <option value="4">Divorciado</option>
+                <option value="5">Viúvo</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="foto">Escolha a foto de perfil:</label>
+            <input name="fotoPerfi" id="foto" type="file" accept=".jpg" required>
+        </fieldset>
+        <fieldset>
+            <input type="time" min="08:00" max="18:00" required>
+        </fieldset>
+        <fieldset>
+            <label for="maioridade">Você é maior de idade:</label><br>
+            <input type="radio" id="maioridade" name="maioridade" value="Sim" checked>Não sou maior de idade<br>
+            <input type="radio" name="maioridade" value="Não">Sou maior de idade
+        </fieldset>
+        <button>Cadastrar</button>
+        <input type="reset">
+    </form>
+</body>
+</html>
